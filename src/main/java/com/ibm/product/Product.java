@@ -64,7 +64,7 @@ public class Product {
         return quantity;
     }
 
-    public void setName(int quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
