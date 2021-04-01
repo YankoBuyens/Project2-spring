@@ -42,7 +42,7 @@ public class ProductController {
         productService.deleteProduct(id);
     }
 
-    @GetMapping("/products")
+    @GetMapping("/productsWithoutCountry")
     public List<Product> getAllProductsNotInCountry(@PathVariable String countryString){
         return productService.getAllProductsNotInCountry(countryString);
     }
