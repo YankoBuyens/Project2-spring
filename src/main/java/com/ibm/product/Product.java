@@ -1,5 +1,6 @@
 package com.ibm.product;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -29,14 +30,14 @@ public class Product {
     private float price;
     private String country;
     private String holidayType;
-    private LocalDate departureDate;
-    private LocalDate returnDate;
+    private Date departureDate;
+    private Date returnDate;
 
     public Product() {
 
     }
 
-    public Product(int id, String title, String description, String thumbnail_url, int quantity, float price,String country,String holidayType,LocalDate departureDate,LocalDate returnDate) {
+    public Product(int id, String title, String description, String thumbnail_url, int quantity, float price,String country,String holidayType,Date departureDate,Date returnDate) {
         super();
         this.id = id;
         this.title = title;
@@ -114,19 +115,19 @@ public class Product {
         this.holidayType = holidayType;
     }
 
-    public LocalDate getDepartureDate() {
+    public Date getDepartureDate() {
         return departureDate;
     }
 
-    public void setDepartureDate(LocalDate departureDate) {
+    public void setDepartureDate(Date departureDate) {
         this.departureDate = departureDate;
     }
 
-    public LocalDate getReturnDate() {
+    public Date getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(LocalDate returnDate) {
+    public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
     }
 
