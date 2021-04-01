@@ -52,4 +52,13 @@ public class ProductService {
         productRepository.delete(id);
 	}
 
+
+    public List<Product> getAllProductsNotInCountry(String country){
+
+        List<Product> products = new ArrayList<>();
+        productRepository.findByCountryNotLike(country).forEach(products::add);
+        return products;
+
+    }
+
 }

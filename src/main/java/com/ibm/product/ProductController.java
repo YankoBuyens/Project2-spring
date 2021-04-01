@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @RestController
 public class ProductController {
@@ -38,6 +40,11 @@ public class ProductController {
     @RequestMapping(method = RequestMethod.DELETE, value = "/products/{id}")
     public void deleteProduct(@PathVariable Product id) {
         productService.deleteProduct(id);
+    }
+
+    @GetMapping("/products")
+    public List<Product> getAllProductsNotInCountry(@PathVariable String countryString){
+        return productService.getAllProductsNotInCountry(countryString);
     }
 
 }
