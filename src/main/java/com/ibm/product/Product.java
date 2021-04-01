@@ -1,7 +1,6 @@
 package com.ibm.product;
 
 import java.sql.Date;
-import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -29,15 +28,15 @@ public class Product {
     private int quantity;
     private float price;
     private String country;
-    private String holidayType;
-    private Date departureDate;
-    private Date returnDate;
+    private String holiday_type;
+    private Date departure_date;
+    private Date return_date;
 
     public Product() {
 
     }
 
-    public Product(int id, String title, String description, String thumbnail_url, int quantity, float price,String country,String holidayType,Date departureDate,Date returnDate) {
+    public Product(int id, String title, String description, String thumbnail_url, int quantity, float price, String country, String holiday_type, Date departure_date, Date return_date) {
         super();
         this.id = id;
         this.title = title;
@@ -46,9 +45,9 @@ public class Product {
         this.quantity = quantity;
         this.price = price;
         this.country = country;
-        this.holidayType = holidayType;
-        this.departureDate = departureDate;
-        this.returnDate = returnDate;
+        this.holiday_type = holiday_type;
+        this.departure_date = departure_date;
+        this.return_date = return_date;
     }
 
     public int getId() {
@@ -107,28 +106,28 @@ public class Product {
         this.country = country;
     }
 
-    public String getHolidayType() {
-        return holidayType;
+    public String getHoliday_type() {
+        return holiday_type;
     }
 
-    public void setHolidayType(String holidayType) {
-        this.holidayType = holidayType;
+    public void setHoliday_type(String holidayType) {
+        this.holiday_type = holidayType;
     }
 
-    public Date getDepartureDate() {
-        return departureDate;
+    public Date getDeparture_date() {
+        return departure_date;
     }
 
-    public void setDepartureDate(Date departureDate) {
-        this.departureDate = departureDate;
+    public void setDeparture_date(Date departureDate) {
+        this.departure_date = departureDate;
     }
 
-    public Date getReturnDate() {
-        return returnDate;
+    public Date getReturn_date() {
+        return return_date;
     }
 
-    public void setReturnDate(Date returnDate) {
-        this.returnDate = returnDate;
+    public void setReturn_date(Date returnDate) {
+        this.return_date = returnDate;
     }
 
 }
